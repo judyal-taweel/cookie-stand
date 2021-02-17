@@ -8,6 +8,7 @@ function getRandomIntInclusive(minCust, maxCust) {
 let clocks = ['6am' ,'7am', '8am', '9am', '10am' ,'11am' ,'12pm' ,'1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']
 let arrayOfTotal=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let totalOfTotal =0;
+
 let container = document.getElementById('container');
 let table = document.createElement('table');
 container.appendChild(table);
@@ -69,6 +70,7 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
             
 
      Cookiestand.prototype.render=function(){
+      
        
         let tr=document.createElement('tr');
         table.appendChild(tr);
@@ -88,11 +90,32 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
             td.textContent=this.dailySales;    
             
     }
+   
+
+   
 
 
      let objects = [Seattle,Tokyo,Dubai,Paris,Lima];
 
+
+     Seattle.randomCustomerPerHour();
+     Seattle.cookiesSoldPerHour();
+     Seattle.render();
+     Tokyo.randomCustomerPerHour();
+     Tokyo.cookiesSoldPerHour();
+     Tokyo.render();
+     Dubai.randomCustomerPerHour();
+     Dubai.cookiesSoldPerHour();
+     Dubai.render();
+     Paris.randomCustomerPerHour();
+     Paris.cookiesSoldPerHour();
+     Paris.render();
+     Lima.randomCustomerPerHour();
+     Lima.cookiesSoldPerHour();
+     Lima.render();
+
    function lowerRow() {
+
         let tr=document.createElement('tr');
         table.appendChild (tr); 
         let th=document.createElement('th');
@@ -120,23 +143,35 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
    
    
     
-Seattle.randomCustomerPerHour();
-    Seattle.cookiesSoldPerHour();
-    Seattle.render();
-    Tokyo.randomCustomerPerHour();
-    Tokyo.cookiesSoldPerHour();
-    Tokyo.render();
-    Dubai.randomCustomerPerHour();
-    Dubai.cookiesSoldPerHour();
-    Dubai.render();
-    Paris.randomCustomerPerHour();
-    Paris.cookiesSoldPerHour();
-    Paris.render();
-    Lima.randomCustomerPerHour();
-    Lima.cookiesSoldPerHour();
-    Lima.render();
-   lowerRow();
 
+  
+
+
+
+   const form = document.getElementById('cookies');
+   form.addEventListener('submit',newCookiesStand);
+
+   function newCookiesStand(event){
+       event.preventDefault();
+       console.log(event);
+
+       const location = event.target.locationField.value;
+    
+       let minCust = event.target.minCustField.value;
+       let maxCust = event.target.maxCustField.value;
+       let avgCookies = event.target.avgCookiesField.value;
+       
+       let newStands = new Cookiestand (location,minCust,maxCust,avgCookies);
+
+       newStands.randomCustomerPerHour();
+       newStands.cookiesSoldPerHour();
+       newStands.render();
+       lowerRow();
+       
+
+      
+    }
+   
 
   
 
