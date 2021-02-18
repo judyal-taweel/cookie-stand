@@ -158,8 +158,11 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
        const location = event.target.locationField.value;
     
        let minCust = event.target.minCustField.value;
+       minCust = parseInt(minCust);
        let maxCust = event.target.maxCustField.value;
+       maxCust = parseInt(maxCust);
        let avgCookies = event.target.avgCookiesField.value;
+       avgCookies = parseFloat(avgCookies);
        
        let newStands = new Cookiestand (location,minCust,maxCust,avgCookies);
 
@@ -171,7 +174,6 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
 
       
     }
-   
 
   
 
