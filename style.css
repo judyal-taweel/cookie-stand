@@ -1,52 +1,96 @@
+#body1 {
+    background-image: url("https://github.com/LTUC/amman-201d14/blob/main/class-08/lab-b/assets/shirt.jpg?raw=true");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+#body2 {
+    background-image: url("https://i.pinimg.com/236x/0c/f4/18/0cf41864a4277be20004cce2c5c9a566.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 table{
-    border: 2px solid red;
-    margin-top: 50px;
+    border: 2px solid brown;
+    margin: 50px;
 }
 th,td{
-    border:1px solid royalblue;
     padding: 20px;
+    font-size: 25px;
+    color:brown;
+    font-style:unset;
+
 }
+fieldset{
+    color: brown;
+    
+}
+form{
+    width: 50%;
+    margin-left: 25%;
+}
+label{
+    padding-left: 25%;
+}
+input{
+    margin-left:10% ;
+}
+#minCustField{
+    margin-left: 10.6%;
+}
+#avgCookiesField{
+    margin-left: 0%;
+}
+#button{
+    color: brown;
+    background-color: burlywood;
+    margin-left: 25%;
+    margin-bottom: 0%;
+}
+
 header img{
-    width: 100px;
-    height: 50px;
+    width: 200px;
+    height: 100px;
     margin-left: 30px;
     margin-top: 20px;
 
 }
 header h1{
+    position: relative;
     font-size: 100px;
     text-align: center;
-    margin-top: 5px;
-    position: relative;
+    margin-top: 0px;
 }
 header dl{
 margin-left: 1700px;
 margin-top: 0px;
 }
 header a{
-margin-left: 1750px;
-margin-top: 20px;
+margin-left: 20px;
 font-size: 30px;
+text-decoration: none;
+color: black;
+
 }
-header{
-background-color: sienna;
-color: silver;
+header h1{
+color:brown;
 }
 header dl dt{
     font-size: 30px;
+    color: brown;
 }
 header dl dt dd{
     font-size: 40px;
-    color: aliceblue;
+    color: rgb(51, 65, 77);
 }
 main p{
     font-size: 30px;
     font-style: italic;
     width: 95%;
+    color:gray;
+    margin-left: 20px;
 }
-div img{
-width: 1850px;    
-}
+
 fieldset{
     padding: 50px;
     padding-top: 70px;
