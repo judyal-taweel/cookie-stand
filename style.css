@@ -23,6 +23,8 @@ th,td{
 }
 fieldset{
     color: brown;
+    background-color:lightgoldenrodyellow;
+    font-family:'Akaya Telivigala', cursive ;
     
 }
 form{
@@ -89,6 +91,7 @@ main p{
     width: 95%;
     color:gray;
     margin-left: 20px;
+    font-family: 'Akaya Telivigala', cursive;
 }
 
 fieldset{
