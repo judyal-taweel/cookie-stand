@@ -35,7 +35,7 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
         for (let index = 0; index < clocks.length; index++) {
              this.cookiesPerHour.push(Math.floor(this.randomCustomers[index]*this.avgCookies));
              this.dailySales = this.dailySales + this.cookiesPerHour[index];
-             arrayOfTotal[index] + arrayOfTotal[index] + this.cookiesPerHour[index];
+             arrayOfTotal[index] += arrayOfTotal[index] + this.cookiesPerHour[index];
             
         }
     }
@@ -114,7 +114,7 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
      Lima.cookiesSoldPerHour();
      Lima.render();
 
-   function lowerRow() {
+     function lowerRow() {
 
         let tr=document.createElement('tr');
         table.appendChild (tr); 
@@ -164,6 +164,7 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
        let avgCookies = event.target.avgCookiesField.value;
        avgCookies = parseFloat(avgCookies);
        
+       table.deleteRow(-1);
        let newStands = new Cookiestand (location,minCust,maxCust,avgCookies);
 
        newStands.randomCustomerPerHour();
@@ -175,6 +176,6 @@ function Cookiestand(location,minCust,maxCust,avgCookies){
       
     }
 
-  
-
+  lowerRow();
+   
 
